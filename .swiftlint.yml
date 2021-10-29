@@ -1,0 +1,56 @@
+
+### docs => https://realm.github.io/SwiftLint/
+
+# rule 제외
+disabled_rules:
+  - comment_spacing
+  - nesting
+  - force_try
+  - force_cast
+  - trailing_whitespace
+  - function_parameter_count
+ 
+# rule 추가
+opt_in_rules:
+  - empty_count
+  - empty_string
+
+# 제외 파일
+excluded:
+  - Pods
+  - GoodHabits/App/AppDelegate.swift
+
+# 가로 길이
+line_length:
+  warning: 130
+  error: 200
+  ignores_urls: true
+  ignores_comments: true
+# type 세로 길이
+type_body_length:
+    warning: 200
+    error: 300
+
+# 파일 세로 길이
+file_length:
+    warning: 600
+    error: 700
+  
+# class, enum, struct, protocol ..
+type_name:
+  min_length: 4
+  max_length:
+    warning: 40
+    error: 50
+  excluded: # excluded via string
+    - API
+  allowed_symbols: ["_"] # these are allowed in type names
+
+# 변수 및 function
+identifier_name:
+  min_length: 2
+  max_length:
+    warning: 40
+    error: 50
+#  excluded:
+  allowed_symbols: ["_"]

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GoodHabits_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="fJ3-JO-JsN" kind="relationship" relationship="dynamicNotificationInterface" id="JAv-dq-Lgj"/>
+                        <segue destination="7IZ-ye-b7H" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="6s6-EZ-qbB"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Dynamic Notification Interface Controller-->
+        <scene sceneID="YYC-ZE-8Gb">
+            <objects>
+                <controller id="fJ3-JO-JsN"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="643"/>
+        </scene>
+        <!--Dynamic Interactive Notification Interface Controller-->
+        <scene sceneID="a8L-U0-APq">
+            <objects>
+                <controller id="7IZ-ye-b7H"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="343"/>
+        </scene>
+    </scenes>
+</document>
